@@ -1,0 +1,68 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEATER */
+
+.header{    
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.estructura-header{
+    width: auto;     /* 940px PARA PC */
+    position: relative;  /* Relativa a la posición absoluta*/
+    margin: 0 auto; /* 0 en ancho alto y auto en izq-derecha // centrado de un div */
+}
+
+.logo-header img{
+    height: 150px;   /* Redefiní la altura de la imágen de logo */
+}
+
+.nav-header{
+    position: static;   /*ABSOLUTA PARA PC */
+    top: 80px;
+    right: 0; /*CCC*/
+}
+
+.nav-header ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-header li{
+    display: inline;
+}
+
+.nav-header a{
+    text-transform: uppercase; /* Convierte texto en mayúsculas */
+    color: black;
+    font-weight: bold; /* Texto negrita */
+    font-size: 22px; /* Tamaño de la letra */
+    text-decoration: none; /* Saco subrayado */
+}
+
+.nav-header a:hover{  /* hover captura el movimiento del mouse */
+    color:#c78c19;
+    text-decoration: underline; /* Vuelvo a poner subrayado */
+}
+
+
+/*FOOTER*/
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+
+footer img{
+    height: 150px;   /* Redefiní la altura de la imágen de logo */
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}

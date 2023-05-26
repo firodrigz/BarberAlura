@@ -1,35 +1,46 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-}
+/* CSS header */
 
-                                                                                        /* CSS header */
-
-header{
+.header{
+    grid-area: header;
     background-color: #BBBBBB;
     padding: 20px 0;
 }
 
-.caja{
-    width: 940px;
-    position: relative;  /* Relativa a la posición absoluta */
+.estructura-header{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template: 
+    "logo" "nav";
+    justify-content: center;
+    align-content: center;
+    /*width: 940px;     /*CAMBIAR PARA CELULAR */
+    position: relative;  /* Relativa a la posición absoluta 
     margin: 0 auto; /* 0 en ancho alto y auto en izq-derecha // centrado de un div */
 }
 
-.caja img{
+
+.logo-header img{
     height: 150px;   /* Redefiní la altura de la imágen de logo */
 }
 
-nav{
+.nav-header{
+    grid-area: nav;
     position: absolute;
     top: 80px;
     right: 0;
 }
-nav li{
-    display: inline;
-    margin: 0 0 0 15px;
+
+.nav-header ul{
+    display: flex;
+    justify-content: space-around;
 }
 
-nav a{
+.nav-header li{
+    display: inline;
+}
+
+.nav-header a{
     text-transform: uppercase; /* Convierte texto en mayúsculas */
     color: black;
     font-weight: bold; /* Texto negrita */
@@ -37,7 +48,7 @@ nav a{
     text-decoration: none; /* Saco subrayado */
 }
 
-nav a:hover{  /* hover captura el movimiento del mouse */
+.nav-header a:hover{  /* hover captura el movimiento del mouse */
     color:#c78c19;
     text-decoration: underline; /* Vuelvo a poner subrayado */
 }
@@ -47,6 +58,7 @@ nav a:hover{  /* hover captura el movimiento del mouse */
                                                                                     /* CSS footer */
 
 footer{
+    grid-area: footer;
     text-align: center;
     background: url(imagenes/bg.jpg);
     padding: 40px;
@@ -67,8 +79,12 @@ footer img{
 
                                                                                 /* CSS para nuestra home */
 
-.banner{
-    width: 100%;  
+.main{
+    grid-area: main;
+}
+
+.banner img{
+    width: 100%;
 }
 
 /*  elemento > hijo
@@ -119,7 +135,7 @@ footer img{
 }
 
 .mapa-contenido{
-    width: 940px;       /* Caja */
+    width: 940px; /* Caja */
     margin: 0 auto;
 }
 
@@ -299,17 +315,10 @@ marcar un elemento para que se presente de otra manera a través de una condici�
 /*Le puse 940px porque había definido así todas las cajas y de esta manera queda full responsive*/
 /*max-width cuando es menor al valor se aplica*/
 
-@media screen and (max-width:940px){    
-    h1{
-        text-align: center;
-    }
+@media screen and (max-width:480px){    
+   
 
-    nav{
-        position: static;
-        align-content: center;
-    }
-
-    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video, .productos{
+    .principal, .mapa-contenido, .contenido-diferenciales, .video, .productos{
         width: auto;
     }
 
