@@ -1,0 +1,93 @@
+.banner img{
+    width: 100%;
+}
+
+/*  elemento > hijo
+img + p // seleccioname el primer párrafo después de la imágen
+img - p // todos los párrafos despues de la imágen 
+*/
+
+.principal{
+    padding: 2em 1em 1em 1em;
+    background: #FEFEFE;
+    margin: 0 auto;  /* Centramos caja */
+}
+
+.titulo-principal{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;   /* para que no influya el float en los títulos */
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 20%;
+    float: left;  /* para que el texto rodee a la imágen */
+    margin: 0 10px 10px 0 ;
+}
+
+.mapa{
+    padding: 1em 1em;
+    background: linear-gradient(#FEFEFE,#888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 1em 1em 2em 1em;
+    background: linear-gradient(#888888, #5f5f5f);
+}
+
+.contenido-diferenciales{
+    margin: 0 auto;
+}
+
+.items:first-child{
+    font-weight: bold;  /* uso de pseudoclase first-child (modifica solo el primer elemento) */
+}
+
+.lista-diferenciales{
+    margin-bottom: 1em
+}
+
+.items{
+    line-height: 2; /* ayuda a separar */
+}
+
+.items::before{
+    content: "‒"
+}
+
+.imagen-diferenciales{
+    width: 100%;
+    transition: 400ms; 
+    box-shadow: 1px 1px 15px 5px #FFFFFF;   
+}
+
+.imagen-diferenciales:hover{
+    opacity: 0.3;
+}
+
+.video{
+    margin: 3em auto 0;
+}
