@@ -1,37 +1,60 @@
+@import 'reset.css';
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
 
-/* HEATER */
+/* HEADER */
 
-.header{    
-    background-color: #BBBBBB;
-    padding: 20px 0;
+header{   
+    position: sticky;
+    top: 0; /*Para que funcione sticky*/ 
 }
 
 .estructura-header{
     width: auto;     /* 940px PARA PC */
+    height: 80px;
     position: relative;  /* Relativa a la posición absoluta*/
-    margin: 0 auto; /* 0 en ancho alto y auto en izq-derecha // centrado de un div */
+    display: flex;
+    align-items: center; /*align = vertical, justify = horizontal TODO: para pc*/
+    justify-content: space-between;
+    z-index: 2;
+    background-color: #BBBBBB;
+    padding: 0 20px;
 }
 
 .logo-header img{
-    height: 150px;   /* Redefiní la altura de la imágen de logo */
+    height: 50px;   /* Redefiní la altura de la imágen de logo */
+}
+
+.menu-icon{
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .nav-header{
-    position: static;   /*ABSOLUTA PARA PC */
-    top: 80px;
-    right: 0; /*CCC*/
+    width: 100%;
+    position: absolute;
+    z-index: 1; 
+    transition: all .5s;
+    background: linear-gradient(#AFAFAF, #888888);
+    border-radius: 0 0 15px 15px;
+    padding: 10px 0;
 }
 
-.nav-header ul{
-    display: flex;
-    justify-content: space-around;
+.hidden{
+    transform: translateY(-100%);
+    visibility: hidden;
 }
 
 .nav-header li{
-    display: inline;
+    width: 100%;
+    margin-top: 8px;
+    border-bottom: 1px solid #888888;
+}
+
+.nav-header li:last-child{
+    border: none;  /*Saco último subrayado*/
 }
 
 .nav-header a{
@@ -54,6 +77,7 @@ footer{
     text-align: center;
     background: url(imagenes/bg.jpg);
     padding: 40px;
+    margin: 0 auto;
 }
 
 
@@ -65,4 +89,9 @@ footer img{
     color: #FFFFFF;
     font-size: 13px;
     margin: 20px;
+}
+
+
+@media screen and (min-width:800x){
+    
 }
