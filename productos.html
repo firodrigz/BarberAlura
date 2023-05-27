@@ -4,28 +4,37 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width"> <!--Importante para responsive-->
-        <title>Productos - Barbería</title>
-        <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Importante para responsive-->
+        <title>Barbería</title>
+        <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">        
+        <link rel ="stylesheet" href="./FontAwesome/css/fontawesome.min.css">
+        <link rel ="stylesheet" href="./FontAwesome/css/all.min.css">
+        <link rel="stylesheet" href="./estructura.css">        
+        <link rel="stylesheet" href="./productos.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <header>
-            <div class="caja">
-                <h1><img src="imagenes/logo.png"></h1>
-                <nav><!-- Representa mi menú de navegación-->
-                    <ul >  
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
+        <header>  
+            <div class="estructura-header"> 
+                
+                <div class="logo-header"> 
+                    <a href="index.html">
+                        <img src="imagenes/logo.png">
+                    </a>
+                </div>  
+                
+                <i class="fa-solid fa-bars menu-icon"></i>
+                
             </div>
+            
+            <ul class="nav-header hidden"><!-- Representa mi menú de navegación-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
         </header>
 
         <main>
@@ -63,6 +72,7 @@
     </body>
 
 
+    <script src="index.js"></script>
 
 
 </html>

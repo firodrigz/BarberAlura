@@ -1,0 +1,81 @@
+
+.productos{
+    width: 940px;   /* Ancho total */
+    margin: 0 auto;
+    padding: 50px; /* Espacio desde la caja */
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;  /* Centrado */
+    vertical-align: top;
+    margin: 0 1.5%;  /* Margen externo */
+    padding: 30px 20px; /* Margen interno */
+    box-sizing: border-box;  /* Tamaño de la caja, con border box para no sobrepasar */
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    /* border: 2px solid black; */
+
+    /*
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 10px;   /* Redondea esquina izq arriba */
+    
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #c78c19;    
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;  /* Separamos precio de la descipcion */
+}
+
+
+/* Responsive
+marcar un elemento para que se presente de otra manera a través de una condición
+*/
+
+/*Le puse 940px porque había definido así todas las cajas y de esta manera queda full responsive*/
+/*max-width cuando es menor al valor se aplica*/
+
+/* @media screen and (max-width:480px){    
+   
+
+    .principal, .mapa-contenido, .contenido-diferenciales, .video, .productos{
+        width: auto;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+
+    .productos li{
+        width: auto;
+        margin: 0 0 1.5% ;
+    }
+
+} */
