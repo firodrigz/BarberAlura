@@ -1,6 +1,14 @@
+:root {
+    --main-color: #FEFEFE;
+    --secondary-color: #888888;
+  }
+
 .banner img{
+    height: 200px;
     width: 100%;
+    object-fit: cover;
 }
+
 
 /*  elemento > hijo
 img + p // seleccioname el primer párrafo después de la imágen
@@ -9,20 +17,32 @@ img - p // todos los párrafos despues de la imágen
 
 .principal{
     padding: 2em 1em 1em 1em;
-    background: #FEFEFE;
+    background: var(--main-color);
     margin: 0 auto;  /* Centramos caja */
 }
 
-.titulo-principal{
-    text-align: center;
+
+.titulo-secundario, .titulo-principal{
     font-weight: bold;
-    font-size: 2em;
+    text-align: center;
     margin: 0 0 1em;
+    word-break: break-word; /*rompe para que no influya en el responsive*/
+}
+
+.titulo-principal{
+    font-size: 26px;
     clear: left;   /* para que no influya el float en los títulos */
 }
 
-.principal p{
+.titulo-secundario{
+    font-size: 22px;
+}
+section p{
     margin: 0 0 1em;
+}
+
+section li, section p{
+    font-size: 16px;
 }
 
 .principal strong{
@@ -41,7 +61,7 @@ img - p // todos los párrafos despues de la imágen
 
 .mapa{
     padding: 1em 1em;
-    background: linear-gradient(#FEFEFE,#888888);
+    background: linear-gradient( var(--main-color),var(--secondary-color));
 }
 
 .mapa p{
@@ -55,7 +75,7 @@ img - p // todos los párrafos despues de la imágen
 
 .diferenciales{
     padding: 1em 1em 2em 1em;
-    background: linear-gradient(#888888, #5f5f5f);
+    background: linear-gradient(var(--secondary-color), #5f5f5f);
 }
 
 .contenido-diferenciales{
@@ -84,7 +104,8 @@ img - p // todos los párrafos despues de la imágen
     width: 100%;
     transition: 400ms; 
     box-shadow: 1px 1px 15px 5px #FFFFFF;  
-    max-width: fit-content;     
+    max-width: fit-content;
+    margin: 18px;
 }
 
 .imagen-diferenciales:hover{
@@ -98,6 +119,10 @@ img - p // todos los párrafos despues de la imágen
 
 @media screen and (min-width:768px){
 
+    .banner img{
+        height: 300px;
+    }
+
     .utensilios{
         width: 40%;
         margin: 0 10px 0 0 ;        
@@ -108,7 +133,36 @@ img - p // todos los párrafos despues de la imágen
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-    }   
+        flex-direction: row;
+    }
+}
+@media screen and (min-width:1024px){
+    .banner img{
+        height: 500px;
+    }
 
+    section{
+        display: flex;
+        justify-content: center;
+    }
 
+    .content-center-80{
+        width: 80%;
+    }
+
+    .titulo-principal{
+        font-size: 45px;
+    }
+
+    .titulo-secundario{
+        font-size: 35px;
+    }
+
+    section p, section li{
+        font-size: 26px;
+    }
+
+    .contenido-diferenciales{
+        flex-wrap: nowrap;
+    }
 }
