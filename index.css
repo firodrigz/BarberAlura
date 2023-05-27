@@ -34,7 +34,7 @@ img - p // todos los párrafos despues de la imágen
 }
 
 .utensilios{
-    width: 20%;
+    width: 30%;
     float: left;  /* para que el texto rodee a la imágen */
     margin: 0 10px 10px 0 ;
 }
@@ -59,7 +59,9 @@ img - p // todos los párrafos despues de la imágen
 }
 
 .contenido-diferenciales{
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .items:first-child{
@@ -67,7 +69,7 @@ img - p // todos los párrafos despues de la imágen
 }
 
 .lista-diferenciales{
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 
 .items{
@@ -81,7 +83,8 @@ img - p // todos los párrafos despues de la imágen
 .imagen-diferenciales{
     width: 100%;
     transition: 400ms; 
-    box-shadow: 1px 1px 15px 5px #FFFFFF;   
+    box-shadow: 1px 1px 15px 5px #FFFFFF;  
+    max-width: fit-content;     
 }
 
 .imagen-diferenciales:hover{
@@ -90,4 +93,22 @@ img - p // todos los párrafos despues de la imágen
 
 .video{
     margin: 3em auto 0;
+}
+
+
+@media screen and (min-width:768px){
+
+    .utensilios{
+        width: 40%;
+        margin: 0 10px 0 0 ;        
+        max-width: 168px;
+    }
+
+    .contenido-diferenciales{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }   
+
+
 }

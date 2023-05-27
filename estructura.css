@@ -2,6 +2,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: #888888;
 }
 
 /* HEADER */
@@ -37,7 +38,8 @@ header{
     position: absolute;
     z-index: 1; 
     transition: all .5s;
-    background: linear-gradient(#AFAFAF, #888888);
+    background: linear-gradient(#BBBBBB, #888888);
+    height: calc(100vh - 64px);
     border-radius: 0 0 15px 15px;
     padding: 10px 0;
 }
@@ -49,12 +51,9 @@ header{
 
 .nav-header li{
     width: 100%;
-    margin-top: 8px;
-    border-bottom: 1px solid #888888;
-}
-
-.nav-header li:last-child{
-    border: none;  /*Saco último subrayado*/
+    margin-top: 60px;    
+    display: flex;
+    justify-content: center;
 }
 
 .nav-header a{
@@ -68,7 +67,7 @@ header{
 .nav-header a:hover{  /* hover captura el movimiento del mouse */
     color:#c78c19;
     text-decoration: underline; /* Vuelvo a poner subrayado */
-}
+} 
 
 
 /*FOOTER*/
@@ -92,6 +91,47 @@ footer img{
 }
 
 
-@media screen and (min-width:800x){
+@media screen and (min-width:768px){
+    
+    header{   
+        position: relative;
+    }
+    
+    .estructura-header{
+        z-index: 1;
+    }
+
+    .menu-icon{
+        visibility: hidden;
+    }
+    
+    .nav-header{
+        width: 60%;
+        z-index: 2; 
+        transition: all 0s;
+        border-radius: 0;
+        right: 0;
+        height: 40px;
+        
+    }
+    
+    .hidden{        
+        background: #BBBBBB;
+        visibility: visible;
+    }
+    
+    .nav-header li{
+        display: inline;
+        margin: 0 0 0 30px;
+    }
+    
+    .nav-header a{
+        font-size: 18px; /* Tamaño de la letra */
+    }      
+        
+}
+
+@media screen and (min-width:1024px) {
+    
     
 }
