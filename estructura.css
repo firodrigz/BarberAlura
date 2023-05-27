@@ -2,7 +2,6 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: #888888;
 }
 
 /* HEADER */
@@ -14,18 +13,23 @@ header{
 
 .estructura-header{
     width: auto;     /* 940px PARA PC */
-    height: 80px;
+    height: 100px;
     position: relative;  /* Relativa a la posición absoluta*/
     display: flex;
     align-items: center; /*align = vertical, justify = horizontal TODO: para pc*/
     justify-content: space-between;
-    z-index: 2;
+    z-index: 999;
     background-color: #BBBBBB;
     padding: 0 20px;
 }
 
 .logo-header img{
-    height: 50px;   /* Redefiní la altura de la imágen de logo */
+    height: 80px;   /* Redefiní la altura de la imágen de logo */
+    transition: all 200ms;
+}
+
+.logo-header:hover img{
+    filter: drop-shadow(1px 1px 8px #757575);
 }
 
 .menu-icon{
@@ -36,7 +40,7 @@ header{
 .nav-header{
     width: 100%;
     position: absolute;
-    z-index: 1; 
+    z-index: 998; 
     transition: all .5s;
     background: linear-gradient(#BBBBBB, #888888);
     height: calc(100vh - 64px);
@@ -62,11 +66,12 @@ header{
     font-weight: bold; /* Texto negrita */
     font-size: 22px; /* Tamaño de la letra */
     text-decoration: none; /* Saco subrayado */
+    transition: all 200ms;
 }
 
 .nav-header a:hover{  /* hover captura el movimiento del mouse */
-    color:#c78c19;
-    text-decoration: underline; /* Vuelvo a poner subrayado */
+    color: #333333;
+    text-shadow: 2px 2px 2px gray;
 } 
 
 
@@ -82,6 +87,7 @@ footer{
 
 footer img{
     height: 150px;   /* Redefiní la altura de la imágen de logo */
+    margin: inherit; /*hereda el valor del elemento padre (footer)*/
 }
 
 .copyright{
@@ -95,43 +101,56 @@ footer img{
     
     header{   
         position: relative;
+        display: flex;   /*el elemento padre debe tener displayflex*/
+        justify-content: space-between;
+        align-items: center;
+        background-color: #BBBBBB;
     }
     
     .estructura-header{
-        z-index: 1;
+        flex-grow: 2;  /*hijo de header*/
+        z-index: 998;
+        justify-content: left;
     }
 
     .menu-icon{
         visibility: hidden;
+        display: none;
     }
     
     .nav-header{
-        width: 60%;
-        z-index: 2; 
+        flex-grow: 1;   /*hijo de header*/
+        display: flex; /*padre de las listas*/
+        width: auto;
+        background: transparent;
+        z-index: 999; 
         transition: all 0s;
         border-radius: 0;
-        right: 0;
-        height: 40px;
-        
+        height: auto;
+        position: relative;
     }
-    
-    .hidden{        
-        background: #BBBBBB;
+
+
+    .hidden{
         visibility: visible;
+        transform: initial;
     }
     
     .nav-header li{
         display: inline;
-        margin: 0 0 0 30px;
+        margin: 0;
+        flex-grow: 1; /*hijo de nav-header*/
+        width: auto;
     }
     
     .nav-header a{
-        font-size: 18px; /* Tamaño de la letra */
+        font-size: 22px; /* Tamaño de la letra */
     }      
         
 }
 
 @media screen and (min-width:1024px) {
-    
-    
+    .nav-header a{
+        font-size: 28px;
+    }
 }
