@@ -60,20 +60,24 @@
 
 
 @media screen and (min-width:768px){
+    
     .cards{        
         flex-direction: initial;    
         padding: 4%;            
     }
         
     .cards li{
-        display: inline-block;
+        display: flex;
         text-align: center;
         width: 30%;  /* Centrado */
-        vertical-align: top;
-        margin: 0 2%;  /* Margen externo */              
+        margin: 0 2%;  /* Margen externo */   
+        justify-content: end;               
     }
     
-    
+    .cards h2{
+        margin: auto;
+    }
+
     .img-cards{       
         display: flex;
         justify-content: center;
@@ -93,13 +97,11 @@
     }
 
     .cards li{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        display: flex;            
     }
 
     .cards h2{
-        font-size: 30px;
+        font-size: 30px;        
     }
 
     .cards li:hover h2{
@@ -119,7 +121,13 @@
     .producto-precio{
         font-size: 18px;
         font-weight: bold;
-        margin-top: 10px;  /* Separamos precio de la descipcion */
+        margin-top: auto;  /* Separamos precio de la descipcion */
     }
 
+    .producto-precio{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;  /* Separamos precio de la descipcion */
+    }
+    
 }
