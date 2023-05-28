@@ -79,7 +79,7 @@ header{
 
 footer{
     text-align: center;
-    background: url(imagenes/bg.jpg);
+    background: url(./backgound-img/bg.jpg);
     padding: 40px;
     margin: 0 auto;
 }
