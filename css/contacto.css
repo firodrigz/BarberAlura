@@ -30,43 +30,42 @@ select{
 }
 
 .checkbox{
-margin: 20px 0;
+    margin: 20px 0;
 }
 
 .enviar{
-width: 40%;
-padding: 15px 0;
-font-size: 18px;
-font-weight: bold;
-color: #FFFFFF;
-background: #555555;
-border: none;
-border-radius: 5px;
-transition: 1s all; /* cambia tiempo transicion */
-cursor: pointer; /* cambia cursor */
-align-content: center;
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #555555;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /* cambia tiempo transicion */
+    cursor: pointer; /* cambia cursor */
+    align-content: center;
 }
 
 .enviar:hover{
-background: darkgoldenrod;
-transform: scale(1.2); /* agranda */
+    background: #888888;
+    transform: scale(1.2); /* agranda */
 
 }
 
 table{
-margin: 40px auto;
-
+    margin: 40px auto;
 }
 
 thead{
-background: #555555;
-color: white;
-font-weight: bold;
+    background: #555555;
+    color: white;
+    font-weight: bold;
 }
 
 td, th{
-border: 1px solid #000000;
-padding: 8px 15px;
+    border: 1px solid #000000;
+    padding: 8px 15px;
 }
 
 
@@ -113,6 +112,14 @@ padding: 8px 15px;
         width: 60%;
         font-size: 25px;
     }
+
+    table{
+        margin: 20px auto 60px;        
+        }
+
+    td, th{
+        font-size: 26px;
+        }
  
 }
 
