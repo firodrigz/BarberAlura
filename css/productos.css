@@ -37,10 +37,6 @@
     word-break: break-word;
     text-decoration: underline;
 }
-
-.cards li:hover h2{
-    font-size: 26px;
-}
  
 .img-cards img{
     width: 100%;
@@ -102,10 +98,6 @@
 
     .cards h2{
         font-size: 30px;        
-    }
-
-    .cards li:hover h2{
-        font-size: 32px;
     }
     
     .img-cards img{
