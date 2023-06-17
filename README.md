@@ -6,5 +6,5 @@
 
 
 <p align="center">
-  <img src="https://i.postimg.cc/L51Kq8FQ/Barber-Alura.png" alt="Barbería Alura"/>
+  <img src="https://i.postimg.cc/1z24Mtp9/Barber-Alura.png" alt="Barbería Alura"/>
 </p>
